@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Namasthe Inn - Lakkidi, Kerala</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&display=swap" rel="stylesheet">
+ 
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #121212;
+      --text: #f5f5f5;
+      --primary: #202628;
+      --footer: #202628;
+      --card: #1e1e1e;
+    }
+
+    [data-theme="dark"] {
+      --bg: #121212;
+      --text: #f5f5f5;
+      --primary: #202628;
+      --footer: #202628;
+      --card: #1e1e1e;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Raleway", sans-serif;
+		font-optical-sizing: auto;
+ 
+      color: var(--text);
+      background-color: var(--bg);
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      background: url('farm.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+      z-index: -1;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+	   background: linear-gradient(45deg, #67ff53, #96ffca, #77e6ff);
+  -webkit-background-clip: text;		
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+    }
+	
+	#contact p{
+	font-size : 2rem;
+	font-family : verdana;
+	}
+
+    nav a, .toggle-btn {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+	
+	nav a:hover, .toggle-btnhover {
+	color: #dafffb	;
+	}
+
+    .toggle-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 1rem;
+      text-align: center;
+	  font-family: "Edu NSW ACT Hand Pre", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+    }
+
+    h2 {
+	font-family: "Edu NSW ACT Hand Pre", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;	
+      font-size: 3.3rem;
+      margin-bottom: 1rem;
+	  margin-top: 0px;
+    }
+
+    .swiper {
+     width: 75%;
+    height: 75vh;
+    max-height: 75vh;
+    border-radius: 30px;	
+    }
+	
+	.swiper-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-slide::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Change opacity/color as needed */
+  z-index: 2;
+  pointer-events: none; /* allows clicks to pass through */
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+    iframe {
+      width: 100%;
+      max-width: 1000px;
+      height: 300px;
+      border: 0;
+      border-radius: 10px;
+    }
+
+    .contact-buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      background-color: var(--primary);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .contact-buttons a:hover {
+      background-color: #004d40;
+    }
+
+    .places-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 600px) {
+      .places-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+    }
+
+    .place-card {
+      background: var(--card);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .place-card:hover {
+      transform: scale(1.03);
+    }
+
+    .place-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .place-card h3 {
+      margin: 0.5rem 0;
+    }
+
+    .place-card p {
+      padding: 0 1rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background-color: var(--footer);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Namasthe Inn</div>
+  <nav>
+    <a href="#gallery">Gallery</a>
+    <a href="#map">Locate Us</a>
+    <a href="#explore">Explore Nearby</a>
+    <a href="#contact">Contact</a>
+    <button class="toggle-btn" onclick="toggleDarkMode()">🌙</button>
+  </nav>
+</header>
+
+<section id="gallery">
+  <h2>Our Homestay</h2>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="bedroom1.jpg" alt="Bedroom"></div>
+      <div class="swiper-slide"><img src="living.jpg" alt="Living Room"></div>
+      <div class="swiper-slide"><img src="out2.jpg" alt="Garden"></div>
+      <div class="swiper-slide"><img src="outside.jpg" alt="Outside View"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<section id="map">
+  <h2>Location</h2>
+  <iframe 
+    src="https://www.google.com/maps?q=10.777500479169829,76.44193125353023&z=15&output=embed"
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+</section>
+
+<section id="explore">
+  <h2>Nearby Places to Explore</h2>
+  <div class="places-grid">
+    <div class="place-card">
+      <img src="river2.jpg" alt="Bharathapuzha River">
+      <h3>Bharathapuzha River</h3>
+      <p>A scenic river perfect for peaceful walks and serene sunsets, just a few minutes away.</p>
+    </div>
+    <div class="place-card">
+      <img src="temple.jpg" alt="Temples">
+      <h3>Ottapalam Temples</h3>
+      <p>Historic temples showcasing Kerala’s rich culture and architecture within a 10km radius.</p>
+    </div>
+    <div class="place-card">
+      <img src="silentval.jpg" alt="Silent Valley">
+      <h3>Silent Valley National Park</h3>
+      <p>Nature lovers can explore this tranquil, untouched rainforest about 40km from the inn.</p>
+    </div>
+  </div>
+</		>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>For bookings or enquiries, feel free to reach out.</p>
+  <div class="contact-buttons">
+    <a href="tel:+917736544174">📞 Call Us</a>
+    <a href="https://wa.me/917736544174" target="_blank">💬 WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Namasthe Inn, Lakkidi, Kerala. All rights reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+
+  function toggleDarkMode() {
+    const html = document.documentElement;
+    if (html.getAttribute('data-theme') === 'dark') {
+      html.removeAttribute('data-theme');
+      document.querySelector(".toggle-btn").textContent = "🌙";
+    } else {
+      html.setAttribute('data-theme', 'dark');
+      document.querySelector(".toggle-btn").textContent = "☀️";
+    }
+  }
+</script>
+</body>
+</html>
